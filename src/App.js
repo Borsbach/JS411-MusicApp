@@ -1,26 +1,51 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import {AppBar, Box, Toolbar, Typography, Button, TextField} from '@material-ui/core';
+import Dashboard from './components/Dashboard'
 
-function App() {
+class App extends Component {
+    state ={
+      loggedIn: false
+    }
+
+  render() {
+    if (this.state.loggedIn) {
+      return <Dashboard />
+    } else {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <AppBar position='float'>
+        <Toolbar>
+          <Typography component="div">
+            <Box fontWeight="fontWeightBold" m={2}>
+              My Music App
+            </Box>
+          </Typography>
+        </Toolbar>
+      </AppBar>
+      <br />
+      <TextField className='username'
+        id="standard-input"
+        label="Username*"
+        type="username"
+        autoComplete="current-password"
+        margin="normal"
+      />
+      <br />
+      <TextField className='password'
+        id="standard-password-input"
+        label="Password*"
+        type="password"
+        autoComplete="current-password"
+        margin="normal"
+      />
+      <br />
+      <Button variant="contained" color="primary">
+        Login
+      </Button>
     </div>
-  );
+  )};
+}
 }
 
 export default App;
