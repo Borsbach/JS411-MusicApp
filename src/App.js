@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
 import './App.css';
-import {AppBar, Box, Toolbar, Typography, Button, TextField} from '@material-ui/core';
+import {Button, TextField} from '@material-ui/core';
 import Dashboard from './components/Dashboard'
+import Appbar from './components/Appbar'
 
 class App extends Component {
     state ={
       loggedIn: false
+    }
+
+    handleClick = () => {
+      console.log('Button clicked')
+      this.setState({ loggedIn: !this.state.loggedIn })
     }
 
   render() {
@@ -14,15 +20,7 @@ class App extends Component {
     } else {
   return (
     <div>
-      <AppBar position='float'>
-        <Toolbar>
-          <Typography component="div">
-            <Box fontWeight="fontWeightBold" m={2}>
-              My Music App
-            </Box>
-          </Typography>
-        </Toolbar>
-      </AppBar>
+      <Appbar />
       <br />
       <TextField className='username'
         id="standard-input"
@@ -40,7 +38,7 @@ class App extends Component {
         margin="normal"
       />
       <br />
-      <Button variant="contained" color="primary">
+      <Button onClick={this.handleClick} variant="contained" color="primary">
         Login
       </Button>
     </div>
