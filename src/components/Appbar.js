@@ -5,7 +5,7 @@ class Appbar extends Component {
   state = {  }
   render() { 
     return (
-      <AppBar position='floating'>
+      <AppBar position='sticky'>
         <Toolbar>
           <Typography component="div">
             <Box fontWeight="fontWeightBold" m={2}>
