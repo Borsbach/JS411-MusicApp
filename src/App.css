@@ -19,7 +19,7 @@ Button {
 
 h1 {
   text-align: left;
-  margin-left: 200px;
+  margin-left: 240px;
   margin-top: 40px;
   color: gray;
 }
@@ -33,6 +33,27 @@ h1 {
 .Form {
   width: 180px;
 }
+
+.card1 {
+  width:220px;
+  margin-right: 40px;
+}
+
+.card2 {
+  width: 220px;
+  margin-right: 40px;
+}
+
+.card3 {
+  width: 220px;
+}
+
+/* .notifications {
+  display: inline-flex;
+  justify-content: left; */
+  /* margin-top: 40px; */
+  /* margin-left: 200px; */
+
 
 /* .App-logo {
   height: 40vmin;
