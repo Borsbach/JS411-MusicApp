@@ -10,7 +10,6 @@ class App extends Component {
     }
 
     handleClick = () => {
-      console.log('Button clicked')
       this.setState({ loggedIn: !this.state.loggedIn })
     }
 
@@ -42,8 +41,8 @@ class App extends Component {
         Login
       </Button>
     </div>
-  )};
-}
+    )};
+  }
 }
 
 export default App;
